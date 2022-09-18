@@ -63,7 +63,7 @@ while 1:
         #user_id =  'opet-6VCWWvyzsfu_WwEtERBEaoo'
         #user_id =  'opet-6VmFGa3nWfqo2dgOeSljk1w'
         #res = wm.send_template(user_id, template_id, data)
-        time.sleep(10)
+        time.sleep(60)
     elif(datetime.now().strftime('%H')=='07'):
         time.sleep(60*10)
     else:
