@@ -16,17 +16,10 @@ birthday = os.environ['BIRTHDAY']
 app_id = os.environ["APP_ID"]
 app_secret = os.environ["APP_SECRET"]
 user_id1 = os.environ["USER_ID"]
-#user_id2 = os.environ["USER_ID2"]
+user_id2 = os.environ["USER_NEW_ID"]
 template_id = os.environ["TEMPLATE_ID"]
 
-start_date = '2022-03-19'
-city = '北京'
-birthday = '04-06'
-app_id = 'wx4abfbd3e393507e7'
-app_secret = '037be9a91ee6c7203536049dbc73df10'
-template_id = 'zxO6WSWCw68ZjoefFWTDvnYhOfsf08-2ZeBZzyLlpSI'
-user_id1 =  'opet-6VCWWvyzsfu_WwEtERBEaoo'
-user_id2 =  'opet-6VmFGa3nWfqo2dgOeSljk1w'
+
 
 def get_weather():
   url = "http://autodev.openspeech.cn/csp/api/v2.1/weather?openId=aiuicus&clientType=android&sign=android&city=" + city
@@ -60,10 +53,10 @@ while 1:
   if(datetime.now().strftime('%H')=='01'):
     user_id =  user_id1
     wea, temperature = get_weather()
-    data = {"weather":{"value":wea},"temperature":{"value":os.environ['USER_ID']},"love_days":{"value":get_count()},"birthday_left":{"value":get_birthday()},"words":{"value":get_words(), "color":get_random_color()}}
+    data = {"weather":{"value":wea},"temperature":{"value":temperature},"love_days":{"value":get_count()},"birthday_left":{"value":get_birthday()},"words":{"value":get_words(), "color":get_random_color()}}
     res = wm.send_template(user_id, template_id, data)
-    #user_id =  user_id2
-    #res = wm.send_template(user_id, template_id, data)
+    user_id =  user_id2
+    res = wm.send_template(user_id, template_id, data)
     time.sleep(60*61)
   elif(datetime.now().strftime('%H')=='22'):
     time.sleep(60*10)
