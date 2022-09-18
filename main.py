@@ -59,13 +59,14 @@ wm = WeChatMessage(client)
 while 1:
     if(datetime.now().strftime('%H')=='08'):
         print('1')
-        user_id =  'opet-6VmFGa3nWfqo2dgOeSljk1w'
+        user_id =  'opet-6VCWWvyzsfu_WwEtERBEaoo'
         wea, temperature = get_weather()
         data = {"weather":{"value":wea},"temperature":{"value":temperature},"love_days":{"value":get_count()},"birthday_left":{"value":get_birthday()},"words":{"value":get_words(), "color":get_random_color()}}
         res = wm.send_template(user_id, template_id, data)
-        user_id =  'opet-6VCWWvyzsfu_WwEtERBEaoo'
-        res = wm.send_template(user_id, template_id, data)
-        time.sleep(60*61)
+        #user_id =  'opet-6VCWWvyzsfu_WwEtERBEaoo'
+        #user_id =  'opet-6VmFGa3nWfqo2dgOeSljk1w'
+        #res = wm.send_template(user_id, template_id, data)
+        time.sleep(10)
     elif(datetime.now().strftime('%H')=='07'):
         print(2)
         time.sleep(60*10)
