@@ -51,11 +51,14 @@ def get_words():
 def get_random_color():
   return "#%06x" % random.randint(0, 0xFFFFFF)
 
-#print(datetime.now().strftime('%H'))
+
+
+
 client = WeChatClient(app_id, app_secret)
 wm = WeChatMessage(client)
 while 1:
-    if(datetime.now().strftime('%H')=='8'):
+    if(datetime.now().strftime('%H')=='08'):
+        print('1')
         user_id =  'opet-6VmFGa3nWfqo2dgOeSljk1w'
         wea, temperature = get_weather()
         data = {"weather":{"value":wea},"temperature":{"value":temperature},"love_days":{"value":get_count()},"birthday_left":{"value":get_birthday()},"words":{"value":get_words(), "color":get_random_color()}}
@@ -63,7 +66,9 @@ while 1:
         user_id =  'opet-6VCWWvyzsfu_WwEtERBEaoo'
         res = wm.send_template(user_id, template_id, data)
         time.sleep(60*61)
-    elif(datetime.now().strftime('%H')=='7'):
+    elif(datetime.now().strftime('%H')=='07'):
+        print(2)
         time.sleep(60*10)
     else:
+        print(3)
         time.sleep(60*50)
