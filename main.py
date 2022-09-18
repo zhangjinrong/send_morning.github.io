@@ -51,7 +51,7 @@ client = WeChatClient(app_id, app_secret)
 wm = WeChatMessage(client)
 
 while 1:
-  if(datetime.now().strftime('%H')=='23'):
+  if(datetime.now().strftime('%H')=='01'):
     user_id =  user_id1
     wea, temperature = get_weather()
     data = {"weather":{"value":wea},"temperature":{"value":temperature},"love_days":{"value":get_count()},"birthday_left":{"value":get_birthday()},"words":{"value":get_words(), "color":get_random_color()}}
