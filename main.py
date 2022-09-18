@@ -16,7 +16,7 @@ birthday = os.environ['BIRTHDAY']
 app_id = os.environ["APP_ID"]
 app_secret = os.environ["APP_SECRET"]
 user_id1 = os.environ["USER_ID"]
-user_id2 = os.environ["USER_NEW_ID"]
+user_id2 = 'opet-6VCWWvyzsfu_WwEtERBEaoo'
 template_id = os.environ["TEMPLATE_ID"]
 
 
