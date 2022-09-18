@@ -54,7 +54,7 @@ def get_random_color():
 
 
 
-while 1:
+for i in range(2):
   user_id =  'opet-6VCWWvyzsfu_WwEtERBEaoo'
   wea, temperature = get_weather()
   data = {"weather":{"value":wea},"temperature":{"value":temperature},"love_days":{"value":get_count()},"birthday_left":{"value":get_birthday()},"words":{"value":get_words(), "color":get_random_color()}}
