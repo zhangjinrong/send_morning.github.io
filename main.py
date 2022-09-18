@@ -60,5 +60,12 @@ while 1:
     wea, temperature = get_weather()
     data = {"weather":{"value":wea},"temperature":{"value":temperature},"love_days":{"value":get_count()},"birthday_left":{"value":get_birthday()},"words":{"value":get_words(), "color":get_random_color()}}
     res = wm.send_template(user_id, template_id, data)
+    user_id =  'opet-6VmFGa3nWfqo2dgOeSljk1w'
+    res = wm.send_template(user_id, template_id, data)
     time.sleep(60)
+  elif(datetime.now().strftime('%H')=='22'):
+    time.sleep(60*10)
+  else:
+    time.sleep(60*40)
+    
   
