@@ -50,7 +50,6 @@ client = WeChatClient(app_id, app_secret)
 wm = WeChatMessage(client)
 
 while 1:
-  time.sleep(60)
   nowtime = datetime.utcnow() + timedelta(hours=8)
   if(nowtime.strftime('%H')=='08'):
     user_id =  user_id1
