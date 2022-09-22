@@ -52,7 +52,7 @@ wm = WeChatMessage(client)
 while 1:
   time.sleep(60)
   nowtime = datetime.utcnow() + timedelta(hours=8)
-  if(nowtime.strftime('%H')=='07'):
+  if(nowtime.strftime('%H')=='08'):
     user_id =  user_id1
     wea, temperature = get_weather()
     data = {"weather":{"value":wea},"temperature":{"value":temperature},"love_days":{"value":get_count()},"birthday_left":{"value":get_birthday()},"words":{"value":get_words(), "color":get_random_color()}}
